@@ -1,5 +1,3 @@
-// import { FaTrashAlt } from "react-icons/fa";
-
 export default function Main({ items, handleCheck, handleDelete }) {
 
     return (
@@ -18,17 +16,14 @@ export default function Main({ items, handleCheck, handleDelete }) {
                                 onDoubleClick={() => handleCheck(item.id)}
                             >{item.item}</label>
                             <button
+                                className="delete-btn"
                                 onClick={() => handleDelete(item.id)}
                             >Delete</button>
-                            {/* <FaTrashAlt 
-                                role="button"
-                                tabIndex="0"
-                        /> */}
                         </li>
                     ))}
                 </ul>
             ) : (
-                <p style={{ marginTop: '2rem' }}>Your list is empty</p>
+                <p className="empty-message">Your list is empty — add something!</p>
             )}
         </main>
     );

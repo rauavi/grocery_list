@@ -5,8 +5,8 @@ export default function SearchItem({ search, setSearch }) {
             <input
                 type="text"
                 id='search'
-                role="seacrchbox"
-                placeholder="Search Items"
+                role="searchbox"
+                placeholder="Search items..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}></input>
         </form>
